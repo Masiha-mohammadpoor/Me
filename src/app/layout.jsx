@@ -8,7 +8,7 @@ const comfortaa = Comfortaa({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={comfortaa.className}>
+      <body className={`${comfortaa.className} overflow-x-hidden`}>
         {children}
       </body>
     </html>
