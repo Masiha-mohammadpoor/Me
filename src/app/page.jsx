@@ -2,6 +2,8 @@
 import { HiArrowDown } from "react-icons/hi2";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import Skill from "@/components/Skill";
+import { skills } from "../../data/data";
 
 const NeonLamp = dynamic(() => import("@/components/NeonLamp"), { ssr: false });
 const TypeAnimation = dynamic(
@@ -47,9 +49,13 @@ export default function Home() {
           </button>
         </section>
       </section>
-      <section className="w-screen flex flex-col items-center gap-y-10 mb-32" >
+      <section className="w-screen flex flex-col items-center gap-y-10 mb-32">
         <NeonLamp text="About Me" />
-        <p className="w-[40rem] text-white text-center leading-7">
+        <p
+          className="w-[40rem] text-white text-center leading-7"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           Hi , I'm Masiha Mohammadpour , I am 18 . I am a front-end developer
           and have been learning for about 2 years, I am also interested in
           learning new tools and experiencing new challenges. I use the
@@ -67,6 +73,14 @@ export default function Home() {
           </Link>
           .
         </p>
+      </section>
+      <section className="w-screen flex flex-col items-center gap-y-10 mb-32">
+        <NeonLamp text="Skills" />
+        <div className="w-[45rem] grid grid-cols-5 gap-7">
+          {skills.map((s) => {
+            return <Skill key={s.id} id={s.id} src={s.image} title={s.title} />;
+          })}
+        </div>
       </section>
     </main>
   );
