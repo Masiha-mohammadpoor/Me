@@ -104,13 +104,39 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
   rgba(0, 0, 0, 0) 70%, 
   rgba(251, 0, 255, 0.9) 80%, 
   #00DBDE 100%);
-  animation: rotate 2s infinite linear;
   z-index: -5;
+  animation: rotate 2s infinite linear;
 
+}
+
+.portfolio::before {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  left: -100%;
+  top: -100%;
+  background: conic-gradient(from 90deg, 
+  rgba(0, 0, 0, 0) 70%, 
+  rgba(251, 0, 255, 0.9) 80%, 
+  #00DBDE 100%);
+  z-index: -5;
+  animation: rotate 2s infinite linear;
 }
 
 @keyframes rotate {
   100% {
       transform: rotate(360deg);
   }
+}
+
+.neon-btn:hover {
+  box-shadow: 
+      0 0 10px #00DBDE, 
+      0 0 20px #00DBDE, 
+      0 0 40px #00DBDE, 
+      0 0 80px #00DBDE;
+  color: #FC00FF;
+  border-color: #00DBDE;
+  background-color: #00DBDE;
 }

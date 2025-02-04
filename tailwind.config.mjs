@@ -10,7 +10,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary : colors.green,
+        primary : "#FC00FF",
+        secondary : "#00DBDE"
       },
     },
   },

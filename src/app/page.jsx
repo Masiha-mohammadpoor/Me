@@ -3,7 +3,11 @@ import { HiArrowDown } from "react-icons/hi2";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Skill from "@/components/Skill";
-import { skills } from "../../data/data";
+import { portfolio, skills } from "../../data/data";
+import Portfolio from "@/components/Portfolio";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const NeonLamp = dynamic(() => import("@/components/NeonLamp"), { ssr: false });
 const TypeAnimation = dynamic(
@@ -12,6 +16,12 @@ const TypeAnimation = dynamic(
 );
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 2500,
+      once: false,
+    });
+  }, []);
   return (
     <main>
       <section className="w-screen h-[34rem] main-bg overflow-hidden mb-32">
@@ -79,6 +89,14 @@ export default function Home() {
         <div className="w-[45rem] grid grid-cols-5 gap-7">
           {skills.map((s) => {
             return <Skill key={s.id} id={s.id} src={s.image} title={s.title} />;
+          })}
+        </div>
+      </section>
+      <section className="w-screen flex flex-col items-center gap-y-10 mb-32">
+        <NeonLamp text="portfolio" />
+        <div className="w-[55rem] grid grid-cols-6 gap-7">
+          {portfolio.map(p => {
+            return <Portfolio key={p.id} {...p}/>
           })}
         </div>
       </section>
