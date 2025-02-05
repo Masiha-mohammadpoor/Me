@@ -8,6 +8,8 @@ import Portfolio from "@/components/Portfolio";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
+import Contact from "@/components/Contact";
 
 const NeonLamp = dynamic(() => import("@/components/NeonLamp"), { ssr: false });
 const TypeAnimation = dynamic(
@@ -93,11 +95,28 @@ export default function Home() {
         </div>
       </section>
       <section className="w-screen flex flex-col items-center gap-y-10 mb-32">
-        <NeonLamp text="portfolio" />
+        <NeonLamp text="Portfolio" />
         <div className="w-[55rem] grid grid-cols-6 gap-7">
-          {portfolio.map(p => {
-            return <Portfolio key={p.id} {...p}/>
+          {portfolio.map((p) => {
+            return <Portfolio key={p.id} {...p} />;
           })}
+        </div>
+      </section>
+      <section className="w-screen flex flex-col items-center gap-y-10 mb-32">
+        <NeonLamp text="Contact" />
+        <div
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          className="w-[50rem] flex justify-between items-center"
+        >
+          <Contact />
+          <Image
+            src="/images/social.svg"
+            alt="social"
+            width={300}
+            height={300}
+            className="svg"
+          />
         </div>
       </section>
     </main>

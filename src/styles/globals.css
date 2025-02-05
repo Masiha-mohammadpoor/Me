@@ -140,3 +140,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
   border-color: #00DBDE;
   background-color: #00DBDE;
 }
+
+.svg {
+  filter: drop-shadow(4px 4px 10px #fb00ff46);
+}
