@@ -10,8 +10,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${comfortaa.className} overflow-x-hidden`}>
-        <div className="w-full flex justify-center">
-        {/* <Header/> */}
+        <div className="w-full flex justify-end lg:justify-center px-5">
+          <Header />
         </div>
         {children}
       </body>
