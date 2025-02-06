@@ -1,8 +1,8 @@
 "use client";
 
-const NeonLamp = ({text}) => {
+const NeonLamp = ({text , id}) => {
   return (
-    <div className="flex flex-col gap-y-4 items-center">
+    <div id={id} className="flex flex-col gap-y-4 items-center">
     <div className="flex flex-col items-center">
       <div className="w-32 h-6 bg-gray-700 rounded-t-sm rounded-b-3xl"></div>
       <div className="flex gap-x-10">

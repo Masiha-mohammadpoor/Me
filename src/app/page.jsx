@@ -25,16 +25,13 @@ export default function Home() {
     });
   }, []);
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <section className="w-screen h-[34rem] main-bg overflow-hidden mb-32">
         <section className="w-full h-full main-bg-2 flex flex-col gap-y-5 items-center pt-32">
-          {/* image */}
           <div className="w-40 h-40 rounded-full bg-black"></div>
-          {/* name */}
-          <h3 className="text-2xl font-semibold text-white px-3 py-1 rounded-full reverse-bg">
+          <h3 className="sm:text-2xl text-lg font-semibold text-white px-3 py-1 rounded-full reverse-bg">
             I'm Masiha Mohammadpour
           </h3>
-          {/* about */}
           <h4 className="text-lg font-semibold text-white">
             Front-end Developer
           </h4>
@@ -61,10 +58,11 @@ export default function Home() {
           </button>
         </section>
       </section>
+
       <section className="w-screen flex flex-col items-center gap-y-10 mb-32">
-        <NeonLamp text="About Me" />
+        <NeonLamp text="About Me" id="aboutme"/>
         <p
-          className="w-[40rem] text-white text-center leading-7"
+          className="w-screen md:w-[40rem] text-white text-justify leading-8 text-sm px-4"
           data-aos="fade-up"
           data-aos-duration="2000"
         >
@@ -87,27 +85,27 @@ export default function Home() {
         </p>
       </section>
       <section className="w-screen flex flex-col items-center gap-y-10 mb-32">
-        <NeonLamp text="Skills" />
-        <div className="w-[45rem] grid grid-cols-5 gap-7">
+        <NeonLamp text="Skills" id="skills"/>
+        <div className="w-screen md:w-[45rem] grid grid-cols-10 gap-7 px-4">
           {skills.map((s) => {
             return <Skill key={s.id} id={s.id} src={s.image} title={s.title} />;
           })}
         </div>
       </section>
       <section className="w-screen flex flex-col items-center gap-y-10 mb-32">
-        <NeonLamp text="Portfolio" />
-        <div className="w-[55rem] grid grid-cols-6 gap-7">
+        <NeonLamp text="Portfolio" id="portfolio"/>
+        <div className="w-screen lg:w-[55rem] grid grid-cols-6 gap-7 px-4">
           {portfolio.map((p) => {
             return <Portfolio key={p.id} {...p} />;
           })}
         </div>
       </section>
       <section className="w-screen flex flex-col items-center gap-y-10 mb-32">
-        <NeonLamp text="Contact" />
+        <NeonLamp text="Contact" id="contact"/>
         <div
           data-aos="fade-up"
           data-aos-duration="2000"
-          className="w-[50rem] flex justify-between items-center"
+          className="w-screen md:w-[50rem] flex justify-between items-center px-4"
         >
           <Contact />
           <Image
@@ -115,7 +113,7 @@ export default function Home() {
             alt="social"
             width={300}
             height={300}
-            className="svg"
+            className="svg hidden md:block"
           />
         </div>
       </section>
