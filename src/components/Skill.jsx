@@ -4,7 +4,7 @@ import Image from "next/image";
 const Skill = ({ id, src, title }) => {
   return (
     <div
-      data-aos={id <= 5 ? "fade-right" : "fade-left"}
+      data-aos={id % 2 === 0 ? "fade-left" : "fade-right"}
       data-aos-duration="2500"
       className="skill overflow-hidden relative z-0 col-span-5 md:col-span-2 rounded-lg transition-all p-[3px] bg-gray-700"
     >
