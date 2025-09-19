@@ -58,31 +58,39 @@ export const skills = [
 export const portfolio = [
   {
     id: 1,
-    title: "shopping",
+    title: "Plantly",
+    description:
+      "A flower shop website built with Next.js (full-stack) .",
+    githubLink: "https://github.com/Masiha-mohammadpoor/plantly",
+    projectLink: "https://plantly-one.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "Shopping",
     description:
       "A store site with user and admin panel and other features created with Next.js and Tailwind .",
     githubLink: "https://github.com/Masiha-mohammadpoor/nextjs-shopping",
     projectLink: "https://www.aparat.com/v/fdxa145",
   },
   {
-    id: 2,
-    title: "panel admin",
+    id: 3,
+    title: "Panel Admin",
     description:
       "A static admin panel template with beautiful UI and various charts built with the help of Tailwind and MUI .",
     githubLink: "https://github.com/Masiha-mohammadpoor/berry-panel-admin",
     projectLink: "https://berry-panel-admin.vercel.app",
   },
   {
-    id: 3,
-    title: "blogs app",
+    id: 4,
+    title: "Blogs App",
     description:
       "A program for blogs where you can read and comment on different blogs and publish your own blogs in different categories .",
     githubLink: "https://github.com/Masiha-mohammadpoor/blog-apps",
     projectLink: "https://www.aparat.com/v/dni9w45",
   },
   {
-    id: 4,
-    title: "note app",
+    id: 5,
+    title: "Note App",
     description:
       "Notes app where you can write your notes as well as keep your private notes and specify your daily tasks .",
     githubLink: "https://github.com/Masiha-mohammadpoor/note-app",
