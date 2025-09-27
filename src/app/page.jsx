@@ -1,5 +1,4 @@
 "use client";
-import { HiArrowDown } from "react-icons/hi2";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Skill from "@/components/Skill";
@@ -10,6 +9,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 import Contact from "@/components/Contact";
+import { GoDownload } from "react-icons/go";
 
 const NeonLamp = dynamic(() => import("@/components/NeonLamp"), { ssr: false });
 const TypeAnimation = dynamic(
@@ -24,11 +24,24 @@ export default function Home() {
       once: false,
     });
   }, []);
+
+  const handleDownload = () => {
+    window.open("/files/resume.pdf", "_blank");
+  };
+
   return (
     <main className="overflow-x-hidden">
       <section className="w-screen h-[34rem] main-bg overflow-hidden mb-32">
         <section className="w-full h-full main-bg-2 flex flex-col gap-y-5 items-center pt-32">
-          <div className="w-40 h-40 rounded-full bg-black"></div>
+          <div className="w-40 h-40 rounded-full bg-black overflow-hidden">
+            <Image
+              src="/profile.jpg"
+              alt="profile"
+              width={160}
+              height={160}
+              className="object-contain"
+            />
+          </div>
           <h3 className="sm:text-2xl text-lg font-semibold text-white px-3 py-1 rounded-full reverse-bg">
             I'm Masiha Mohammadpour
           </h3>
@@ -53,14 +66,17 @@ export default function Home() {
               repeat={Infinity}
             />
           </div>
-          <button className="reverse-bg p-3 rounded-full animate-bounce mt-4">
-            <HiArrowDown className="text-white text-2xl " />
+          <button
+            onClick={handleDownload}
+            className="reverse-bg py-2 px-3 rounded-full animate-bounce mt-4 flex justify-center gap-x-2 text-white"
+          >
+            Resume <GoDownload className="text-white text-2xl " />
           </button>
         </section>
       </section>
 
       <section className="w-screen flex flex-col items-center gap-y-10 mb-32">
-        <NeonLamp text="About Me" id="aboutme"/>
+        <NeonLamp text="About Me" id="aboutme" />
         <p
           className="w-screen md:w-[40rem] text-white text-justify leading-8 text-sm px-4"
           data-aos="fade-up"
@@ -85,7 +101,7 @@ export default function Home() {
         </p>
       </section>
       <section className="w-screen flex flex-col items-center gap-y-10 mb-32">
-        <NeonLamp text="Skills" id="skills"/>
+        <NeonLamp text="Skills" id="skills" />
         <div className="w-screen md:w-[45rem] grid grid-cols-10 gap-7 px-4">
           {skills.map((s) => {
             return <Skill key={s.id} id={s.id} src={s.image} title={s.title} />;
@@ -93,7 +109,7 @@ export default function Home() {
         </div>
       </section>
       <section className="w-screen flex flex-col items-center gap-y-10 mb-32">
-        <NeonLamp text="Portfolio" id="portfolio"/>
+        <NeonLamp text="Portfolio" id="portfolio" />
         <div className="w-screen lg:w-[55rem] grid grid-cols-6 gap-7 px-4">
           {portfolio.map((p) => {
             return <Portfolio key={p.id} {...p} />;
@@ -101,7 +117,7 @@ export default function Home() {
         </div>
       </section>
       <section className="w-screen flex flex-col items-center gap-y-10 mb-32">
-        <NeonLamp text="Contact" id="contact"/>
+        <NeonLamp text="Contact" id="contact" />
         <div
           data-aos="fade-up"
           data-aos-duration="2000"
