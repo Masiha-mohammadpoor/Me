@@ -82,14 +82,14 @@ export default function Home() {
           data-aos="fade-up"
           data-aos-duration="2000"
         >
-          Hi , I'm Masiha Mohammadpour , I am 18 . I am a front-end developer
-          and have been learning for about 2 years, I am also interested in
+          Hi , I'm Masiha Mohammadpour , I'm 18 . I'm a front-end developer
+          and have been learning for about 2 years, I'm also interested in
           learning new tools and experiencing new challenges. I use the
           JavaScript library, React.js , and its framework, Next.js , And I also
           have a lot of knowledge in libraries and their tools, such as redux,
           redux-toolkit, formik, ... . I also use different styling tools like
           Tailwind.
-          <br /> You can see part of my portfolio and codes in my{" "}
+          <br /> You can see part of my portfolio and codes in my
           <Link
             target="_blank"
             href="https://github.com/Masiha-mohammadpoor"
