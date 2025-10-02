@@ -58,7 +58,7 @@ export const skills = [
 export const portfolio = [
   {
     id: 1,
-    title: "Plantly",
+    title: "Plantly (vpn)",
     description:
       "A flower shop website built with Next.js (full-stack) .",
     githubLink: "https://github.com/Masiha-mohammadpoor/plantly",
@@ -74,7 +74,7 @@ export const portfolio = [
   },
   {
     id: 3,
-    title: "Panel Admin",
+    title: "Panel Admin (vpn)",
     description:
       "A static admin panel template with beautiful UI and various charts built with the help of Tailwind and MUI .",
     githubLink: "https://github.com/Masiha-mohammadpoor/berry-panel-admin",
